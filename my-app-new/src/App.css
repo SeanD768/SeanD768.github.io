@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Allstate Sans';
+  src: url("./fonts/objektivmk2_w_bd-webfont.woff2") format("woff2"), url("./fonts/objektivmk2_w_bd-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: bold; }
+
+@font-face {
+  font-family: 'Allstate Sans';
+  src: url("./fonts/objektivmk2_w_rg-webfont.woff2") format("woff2"), url("./fonts/objektivmk2_w_rg-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+
 .App {
   text-align: center;
 }
@@ -21,6 +34,10 @@
 .App-intro {
   font-size: large;
 }
+
+body {
+  font-family: 'Allstate Sans', sans-serif;
+  font-weight: 400; }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
