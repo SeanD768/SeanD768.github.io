@@ -9,4 +9,13 @@ border: none;
 color: #0033A0;
 font-family: 'Allstate Sans', sans-serif;
 font-weight: 600; 
+display: block;
+margin: 0 auto;
+
+}
+
+.btn:disabled {
+
+    background-color: #efefee;
+    color: #ccc;
 }
