@@ -3,8 +3,21 @@ import logo from './logo.svg';
 import './App.css';
 import Button from './components/button';
 
+
 class App extends Component {
-  render() {
+  
+
+  
+    clicked(){
+      
+            alert("This should be a more appropriate function!");
+           // More appropriate function 
+
+          }
+    
+
+    
+    render() {
     
 
     return (
@@ -21,9 +34,9 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       
-      <Button text="Continue"/>
 
-      
+      <Button handleClick={ (e) => { e.preventDefault(); this.clicked(); } } text="Continue"/>
+      {/* Prevents default submission of the buttons function */}
       </div>
 
     );
