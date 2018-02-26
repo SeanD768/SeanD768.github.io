@@ -112,6 +112,70 @@ const vehicles = [
 },
 
 {
+        make: 'Dodge',
+        vehicles: [
+            {
+                model: 'Challenger',
+            },
+
+            {
+                model: 'Charger',
+            },
+
+            {
+                model: 'Viper',
+            },
+
+            {
+                model: 'Grand Caravan',
+            }, 
+
+            {
+                model: 'Journey',
+            },
+
+            {
+                model: 'Durango',
+            }
+
+
+        ]
+
+},
+
+{
+        make: 'Mitsubishi',
+        vehicles: [
+            {
+                model: 'Lancer',
+            }, 
+
+            {
+                model: 'Mirage',
+            }, 
+
+            {
+                model: 'Mirage G4',
+            },
+
+            {
+                model: 'Outlander',
+            },
+
+            {
+                model: 'Outlander Sport',
+            },
+
+            {
+                model: 'i-MiEV',
+            }
+
+
+        ]
+
+},
+
+{
         make: 'Renault',
         vehicles: [
             {
@@ -145,6 +209,7 @@ const vehicles = [
             {
                 model: 'Koleos',
             }
+            
         ]
 
 },
@@ -810,7 +875,8 @@ class AutoMany extends Component {
         this.setState({
             value: newValue
         });
-        console.log(newValue)   
+        console.log(newValue) 
+        console.log()  
     };
 
     onSuggestionsFetchRequested = ({ value }) => {
@@ -849,7 +915,7 @@ return (
     renderSectionTitle={renderSectionTitle}
     getSectionSuggestions={getSectionSuggestions}
     inputProps={inputProps} />
-
+    
 </div>
 
 
