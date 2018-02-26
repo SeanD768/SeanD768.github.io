@@ -1,0 +1,190 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files. Any changes should be
+//            added to a theme file. Example '/themes/_dialog@include less'
+//
+// Description: Dialog modules include the background overlay as well as the dialog box
+//              that lays on top which contains relative content and action items.
+//
+
+@import '../../styles/abstracts/main';
+
+.c-modal-dialog {
+  &__dialog {
+    animation-name: fadeOutUp;
+    animation-duration: .5s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: transform .5s, visibility 0s linear .5s;
+    visibility: hidden;
+    z-index: $z-index-12;
+
+    @media (min-width: $breakpoint-medium) {
+      bottom: auto;
+      max-width: rem(768);
+      margin: rem(64 0);
+      margin: calc(50vh - 90vh / 2) 0;
+      margin-left: calc(50vw - (48rem/2));
+
+      &.is-slide-drawer {
+        animation: none;
+        top: 0;
+        right: 0;
+        left: auto;
+        bottom: 0;
+        margin: 0;
+        transform: translateX(100%);
+      }
+    }
+
+    @media (min-width: 0) {
+      &--inline {
+        &.is-slide-drawer {
+          bottom: auto;
+          height: 100%;
+          top: auto;
+          margin-top: rem(9);
+
+          .c-modal-dialog__content {
+            @include drop-shadow(rem(1) rem(16) rem(10) $brand);
+            border-top: rem(1) solid $gray-light;
+          }
+        }
+      }
+    }
+
+    &--warning {
+      .c-modal-dialog__content {
+        border: rem(2) solid $alert-orange;
+      }
+    }
+
+    &--error {
+      .c-modal-dialog__content {
+        border: rem(2) solid $alert-red;
+      }
+    }
+
+    &--confirmation {
+      .c-modal-dialog__content {
+        border: rem(2) solid $alert-green;
+      }
+    }
+
+    &--info {
+      .c-modal-dialog__content {
+        border: rem(2) solid $alert-blue;
+      }
+    }
+
+    &--condensed {
+      .c-modal-dialog__body {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__content {
+    box-shadow: $shadow;
+
+    background-color: $white;
+    height: 100%;
+
+    @media (min-width: $breakpoint-medium) {
+        background-color: $white;
+        height: 100%;
+    }
+  }
+
+  &__header {
+    border-bottom: rem(1) solid $gray-lighter;
+    padding: rem(16 24);
+    position: relative;
+  }
+
+  &__body {
+    max-height: calc(100vh - 11.88rem);
+    overflow-x: auto;
+
+    .c-modal-dialog__dialog--no-footer & {
+      max-height: calc(100vh - 5.5rem);
+    }
+
+    .c-modal-dialog__dialog--is-prompt & {
+      max-height: calc(100vh - 1rem);
+    }
+  }
+
+  &__body,
+  &__footer {
+    padding: rem(24);
+  }
+
+  &__footer {
+    border-top: 1px solid $gray-lighter;
+  }
+
+  &.is-active {
+    .c-modal-dialog__dialog {
+      animation-name: fadeInDown;
+      visibility: visible;
+      transition: transform .5s, visibility 0s linear;
+
+      &.is-slide-drawer {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    &--xs {
+      .c-modal-dialog__dialog {
+        max-width: rem(344);
+        margin-left: calc(50vw - (21.5rem/2));
+      }
+    }
+
+    &--sm {
+      .c-modal-dialog__dialog {
+        max-width: rem(544);
+        margin-left: calc(50vw - (34rem/2));
+      }
+    }
+
+    &--lg {
+      .c-modal-dialog__dialog {
+        max-width: rem(824);
+        margin-left: calc(50vw - (51.5rem/2));
+      }
+    }
+
+    &--xl {
+      .c-modal-dialog__dialog {
+        max-width: rem(1024);
+        margin-left: calc(50vw - (64rem/2));
+      }
+    }
+  }
+
+  &--full {
+    .c-modal-dialog__dialog {
+      height: 100vh;
+      margin: 0;
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    .c-modal-dialog__body {
+      max-height: unset;
+      padding: 0;
+    }
+  }
+}

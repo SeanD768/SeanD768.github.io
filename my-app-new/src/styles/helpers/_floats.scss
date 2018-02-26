@@ -1,0 +1,15 @@
+// scss-lint:disable ImportantRule
+
+// Floats Helpers
+.u-float {
+  &--left{
+  	float: left;
+  }
+
+  &--right {
+  	float: right;
+  }
+  &--none {
+  	float: none;
+  }
+}

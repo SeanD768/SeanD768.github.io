@@ -1,0 +1,151 @@
+// scss-lint:disable ImportantRule
+
+.u-text-caps {
+  text-transform: uppercase;
+}
+
+.u-heading-display-one {
+  color: $blue-dark;
+  font-size: $display-heading-one;
+  font-weight: $font-light;
+}
+
+.u-heading-display-two {
+  color: $blue-dark;
+  font-size: $display-heading-two;
+  font-weight: $font-light;
+}
+
+.u-heading-display-three {
+  color: $blue-dark;
+  font-size: $display-heading-three;
+  text-transform: uppercase;
+  font-weight: $font-medium;
+}
+
+
+// Anchor/Link styles
+.u-anchor {
+  color: $color-link;
+}
+
+.u-anchor:hover {
+  text-decoration: underline;
+}
+
+// Text styles
+.u-text-large,
+.u-text-lg {
+  font-size: $base-font-size-large;
+}
+
+.u-text-medium,
+.u-text-md {
+  font-size: $base-font-size;
+}
+
+.u-text-small,
+.u-text-sm {
+  font-size: $base-font-size-small;
+}
+
+.u-text-xsmall,
+.u-text-xs {
+  font-size: $base-font-size-xsmall;
+}
+
+.u-text-thin {
+  font-weight: $font-light;
+}
+
+.u-text-normal {
+  font-weight: $font-normal;
+}
+
+.u-text-semibold {
+  font-weight: $font-medium;
+}
+
+.u-text-bold {
+  font-weight: $font-bold;
+}
+
+.u-text-italic {
+  font-style: italic;
+}
+
+.u-text-underline {
+  text-decoration: underline;
+}
+
+.u-text-strike {
+  text-decoration: line-through;
+}
+
+// Text colors
+.u-text-gray-accent {
+  color: $accent-gray;
+}
+
+.u-text-gray-lighter {
+  color: $gray-lighter;
+}
+
+.u-text-gray-light {
+  color: $gray-light;
+}
+
+.u-text-gray {
+  color: $gray-medium;
+}
+
+.u-text-gray-dark {
+  color: $gray-dark;
+}
+
+.u-text-primary {
+  color: $brand;
+}
+
+.u-text-yellow {
+  color: $yellow;
+}
+
+.u-text-blue-dark {
+  color: $blue-dark;
+}
+
+.u-text-success {
+  color: $alert-green;
+}
+
+.u-text-information {
+  color: $alert-blue;
+}
+
+.u-text-warning {
+  color: $orange-light;
+}
+
+.u-text-progress {
+  color: $yellow;
+}
+
+.u-text-error {
+  color: $alert-red;
+}
+
+.u-text-inverse {
+  color: $white;
+}
+
+.u-text-action {
+  color: $action;
+}
+
+// Text truncate
+.u-text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

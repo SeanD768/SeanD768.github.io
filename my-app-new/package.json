@@ -4,13 +4,19 @@
   "private": true,
   "homepage": "http://SeanD768.github.io/test.github.io",
   "dependencies": {
+    "classnames": "^2.2.5",
+    "focus-trap": "^2.4.3",
+    "node-sass-chokidar": "0.0.3",
     "react": "^16.2.0",
+    "react-autosuggest": "^9.3.4",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

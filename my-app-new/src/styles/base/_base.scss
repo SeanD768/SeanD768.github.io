@@ -1,0 +1,90 @@
+// ------------------------
+//  INFORMATION
+// ------------------------
+// Important: Do not change these core files.
+//
+// Description: Our base HTML elements.
+//
+//
+// ------------------------
+//  APPENDIX
+// ------------------------
+//
+// 1. Enables kerning and optional ligatures.
+// 2. Disables subpixel-rendering and smoothes the font on the level of the pixel
+// 3. This will auto-hide the scroll bar in Internet Explorer 11 allowing for a better look.
+//
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: pixify($root-font-size);
+  height: 100%; // [2]
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; // [1]
+  -ms-overflow-style: -ms-autohiding-scrollbar; // [3]
+}
+
+body {
+  background-color: $background;
+  color: $black;
+  font-family: $font-base;
+  height: 100%;
+  line-height: $base-line-height;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: $breakpoint-small) {
+  html {
+    font-size: pixify($root-font-size-mobile);
+  }
+}
+
+hr {
+  background-color: $gray-light;
+  border: 0;
+  height: .1rem;
+  margin: 2.5rem 0;
+  padding: 0;
+}
+
+sup {
+  font-size: 50%;
+  vertical-align: top;
+}
+
+code {
+  background-color: $gray-lighter;
+  font-family: $font-monospace;
+  padding: .2rem .3rem;
+}
+
+dl dt {
+  font-weight: $font-bold;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+[disabled], [disabled]:hover {
+  cursor: default;
+  opacity: .5;
+  text-decoration: none;
+}

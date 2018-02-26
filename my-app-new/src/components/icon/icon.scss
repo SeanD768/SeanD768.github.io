@@ -1,0 +1,19 @@
+@import '../../styles/abstracts/main';
+
+.c-icon {
+  &--charred {
+    fill: $gray-medium;
+  }
+
+  &--90deg {
+    transform: rotate(90deg);
+  }
+
+  &--180deg {
+    transform: rotate(180deg);
+  }
+
+  &--270deg {
+    transform: rotate(270deg);
+  }
+}

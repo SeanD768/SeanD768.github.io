@@ -1,0 +1,94 @@
+.c-selectable-panel {
+  align-items: center;
+  background: #fff;
+  color: #6d6d6d;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.8125rem 0;
+  position: relative;
+  text-align: center;
+  transition: background-color .3s;
+  width: 100%;
+  z-index: 50; }
+  .c-selectable-panel__bd {
+    color: #003B9B;
+    user-select: none; }
+    .c-selectable-panel__bd::before {
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -300; }
+  .c-selectable-panel path {
+    fill: #406f9a;
+    transition: fill .3s; }
+  .c-selectable-panel__input {
+    appearance: none;
+    bottom: 0;
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%; }
+    .c-selectable-panel__input ~ .c-selectable-panel__bd::before {
+      border: 0.0625rem solid #ccc;
+      border-radius: 0.25rem;
+      transition: box-shadow .3s; }
+    .c-selectable-panel__input:focus ~ .c-selectable-panel__bd::before, .c-selectable-panel__input:hover ~ .c-selectable-panel__bd::before {
+      box-shadow: 0 0 0 0.3125rem #a6cfec; }
+    .c-selectable-panel__input:active ~ .c-selectable-panel__bd::before {
+      background-color: #a6cfec;
+      box-shadow: none; }
+  .c-selectable-panel__input:checked + .c-selectable-panel__hd {
+    color: #fff; }
+    .c-selectable-panel__input:checked + .c-selectable-panel__hd path {
+      fill: #fff; }
+  .c-selectable-panel__input:checked ~ .c-selectable-panel__bd {
+    color: #fff;
+    text-shadow: 0 0.0625rem 0 #222; }
+    .c-selectable-panel__input:checked ~ .c-selectable-panel__bd::before {
+      background: #406f9a;
+      color: #fff; }
+  .c-selectable-panel__input:checked:active ~ .c-selectable-panel__bd::before {
+    background-color: #003B9B; }
+  .c-selectable-panel__input:disabled + .c-selectable-panel__hd {
+    color: #6d6d6d; }
+    .c-selectable-panel__input:disabled + .c-selectable-panel__hd path {
+      fill: #6d6d6d; }
+  .c-selectable-panel__input:disabled:checked + .c-selectable-panel__hd {
+    color: #fff; }
+    .c-selectable-panel__input:disabled:checked + .c-selectable-panel__hd path {
+      fill: #fff; }
+  .c-selectable-panel__input:disabled:checked ~ .c-selectable-panel__bd {
+    color: #fff;
+    opacity: 1; }
+    .c-selectable-panel__input:disabled:checked ~ .c-selectable-panel__bd::before {
+      background: #b9b9b9;
+      border-color: #b9b9b9;
+      box-shadow: none;
+      color: #fff;
+      opacity: 1; }
+  .c-selectable-panel__input:disabled ~ .c-selectable-panel__bd {
+    color: #6d6d6d; }
+    .c-selectable-panel__input:disabled ~ .c-selectable-panel__bd::before {
+      box-shadow: none;
+      border: 0.0625rem solid #ccc;
+      opacity: .8; }
+  .c-selectable-panel__input:disabled:hover ~ .c-selectable-panel__bd::before, .c-selectable-panel__input:disabled:focus ~ .c-selectable-panel__bd::before, .c-selectable-panel__input:disabled:active ~ .c-selectable-panel__bd::before {
+    background: #fff; }
+  .c-selectable-panel__input:disabled:hover ~ .c-selectable-panel__bd::before {
+    border: 0; }
+  .c-selectable-panel.is-disabled {
+    cursor: default;
+    pointer-events: none; }
+  .c-selectable-panel.has-warning .c-selectable-panel__input ~ .c-selectable-panel__bd::before {
+    border: 0.125rem solid #ff8400; }
+  .c-selectable-panel.has-error .c-selectable-panel__input ~ .c-selectable-panel__bd::before {
+    border: 0.125rem solid #cf102d; }

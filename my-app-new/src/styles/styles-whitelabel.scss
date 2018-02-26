@@ -1,0 +1,21 @@
+//
+// ABSTRACTS
+// -----
+// The abstracts/ folder gathers all Sass tools and helpers used across the project.
+// Every global variable, function, mixin and placeholder these files.
+//
+// The rule of thumb for this folder is that it should not output a single line of
+// CSS when compiled on its own. These are nothing but Sass helpers.
+// ==========================================================================
+@import 'abstracts/variables',
+'abstracts-agent/variables',
+'abstracts/functions',
+'abstracts/mixins',
+'abstracts/placeholders';
+
+//
+// MAIN
+// -----
+// The collection of shared Sass/SCSS files across themes
+// ==========================================================================
+@import "main";
