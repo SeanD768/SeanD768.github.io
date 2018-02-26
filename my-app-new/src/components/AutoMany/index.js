@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Autosuggest from 'react-autosuggest';
 import './style.css';
 
-
 const vehicles = [
 {
         make: 'Tesla',
@@ -742,9 +741,10 @@ const vehicles = [
         ]
 
 }
-    
-    
 ];
+
+
+
 
 function escapeRegexCharacters(str) {
     return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -770,35 +770,33 @@ function getSuggestions(value) {
     .filter(section => section.vehicles.length > 0);        
 }
 
-
 function getSuggestionValue(suggestion) {
-    return suggestion.model;
+    return suggestion.model;     
 }
 
-function renderSuggestion(suggestion) {
+function renderSuggestion(suggestion) {    
     return (
 
         <span>{suggestion.model}</span>
-
+        
     );
 }
 
 function renderSectionTitle(section) {
     return (
 
-        <strong>{section.make}</strong>
-
+        <strong>{section.make}</strong>        
     );
 }
 
 function getSectionSuggestions(section) {
     return section.vehicles;
+     
 }
 
 
 
-
-class AutoMany extends React.Component {
+class AutoMany extends Component {
     constructor() {
         super();
 
@@ -812,6 +810,7 @@ class AutoMany extends React.Component {
         this.setState({
             value: newValue
         });
+        console.log(newValue)   
     };
 
     onSuggestionsFetchRequested = ({ value }) => {
@@ -831,10 +830,11 @@ render() {
     const inputProps = {
         placeholder: "Vehicle Model",
         value,
-        onChange: this.onChange
-    };
+        onChange: this.onChange  
+    }; 
+    
 
-return (
+return (    
 
 
 <div> 

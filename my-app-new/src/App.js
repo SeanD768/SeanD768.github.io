@@ -11,7 +11,6 @@ import AutoMany from './components/AutoMany';
 
 
 
-
     render() {
 
 
