@@ -1,0 +1,52 @@
+@function pixify($values) {
+    $pxs: ();
+
+    @each $value in $values {
+        @if $value == 0 or $value == auto {
+            $pxs: append($pxs, $value);
+        } @else {
+            $pxs: append(
+                $pxs,
+                $value + px
+            );
+        }
+    }
+
+    @return $pxs;
+}
+
+// PX to EM - Usage: font-size: em(37);
+@function em($values) {
+  $ems: ();
+
+  @each $value in $values {
+    @if $value == 0 or $value == auto {
+      $ems: append($ems, $value);
+    } @else {
+      $ems: append(
+          $ems,
+          ($value / $root-font-size) + em
+      );
+    }
+  }
+
+  @return $ems;
+}
+
+// PX to REM - Usage: font-size: rem(37);
+@function rem($values) {
+  $rems: ();
+
+  @each $value in $values {
+      @if $value == 0 or $value == auto {
+          $rems: append($rems, $value);
+      } @else {
+          $rems: append(
+              $rems,
+              ($value / $root-font-size) + rem
+          );
+      }
+  }
+
+  @return $rems;
+}

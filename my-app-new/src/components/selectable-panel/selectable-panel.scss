@@ -1,0 +1,187 @@
+@import '../../styles/main';
+
+.c-selectable-panel {
+  align-items: center;
+  background: $white;
+  color: $gray-medium;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: rem(13) 0;
+  position: relative;
+  text-align: center;
+  transition: background-color .3s;
+  width: 100%;
+  z-index: $z-index-1;
+
+  &__bd {
+    color: $brand;
+    user-select: none;
+
+    &::before {
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -$z-index-5;
+    }
+  }
+
+  & path {
+    fill: $selection;
+    transition: fill .3s;
+  }
+
+  &__input {
+    appearance: none;
+    bottom: 0;
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+
+    & ~ .c-selectable-panel__bd {
+      &::before {
+        border: .0625rem solid $gray-light;
+        border-radius: rem(4);
+        transition: box-shadow .3s;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      & ~ .c-selectable-panel__bd {
+        &::before {
+          box-shadow: rem(0 0 0 5) $action-accent;
+        }
+      }
+    }
+
+    &:active {
+      & ~ .c-selectable-panel__bd {
+        &::before {
+          background-color: $action-accent;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  &__input:checked {
+    & + .c-selectable-panel__hd {
+      color: $white;
+
+      path {
+        fill: $white;
+      }
+    }
+
+    & ~ .c-selectable-panel__bd {
+      color: $white;
+      text-shadow: rem(0 1 0) $black;
+
+      &::before {
+        background: $selection;
+        color: $white;
+      }
+    }
+
+    &:active {
+      & ~ .c-selectable-panel__bd {
+        &::before {
+          background-color: $blue-dark;
+        }
+      }
+    }
+  }
+
+  &__input:disabled {
+    & + .c-selectable-panel__hd {
+      color: $gray-medium;
+
+      path{
+        fill: $gray-medium;
+      }
+    }
+
+    &:checked {
+       & + .c-selectable-panel__hd {
+         color: $white;
+
+         path {
+           fill: $white;
+         }
+       }
+
+       & ~ .c-selectable-panel__bd {
+         color: $white;
+         opacity: 1;
+
+         &::before {
+           background: $disabled-gray;
+           border-color: $disabled-gray;
+           box-shadow: none;
+           color: $white;
+           opacity: 1;
+         }
+       }
+    }
+
+    & ~ .c-selectable-panel__bd {
+      color: $gray-medium;
+
+      &::before {
+        box-shadow: none;
+        border: .0625rem solid $gray-light;
+        opacity: .8;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      & ~ .c-selectable-panel__bd {
+        &::before {
+          background: $white;
+        }
+      }
+    }
+
+    &:hover {
+      & ~ .c-selectable-panel__bd {
+        &::before {
+          border: 0;
+        }
+      }
+    }
+  }
+
+  &.is-disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &.has-warning {
+    .c-selectable-panel__input ~ .c-selectable-panel__bd {
+      &::before {
+        border: .125rem solid $orange-light;
+      }
+    }
+  }
+
+  &.has-error {
+    .c-selectable-panel__input ~ .c-selectable-panel__bd {
+      &::before {
+        border: .125rem solid $error-red;
+      }
+    }
+  }
+
+}

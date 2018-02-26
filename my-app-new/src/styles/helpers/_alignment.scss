@@ -1,0 +1,76 @@
+// scss-lint:disable ImportantRule
+
+// Alignment Helpers
+
+.u-align-right {
+  text-align: right;
+}
+
+.u-align-left {
+  text-align: left;
+}
+
+.u-align-center {
+  text-align: center;
+}
+
+
+// scss-lint:disable ImportantRule
+
+// Responsive Alignment
+
+@media (min-width: ($breakpoint-small)) {
+  .u-align-right\@small {
+    text-align: right;
+  }
+
+  .u-align-left\@small {
+    text-align: left;
+  }
+
+  .u-align-center\@small {
+    text-align: center;
+  }
+}
+
+@media (min-width: ($breakpoint-medium)) {
+  .u-align-right\@medium {
+    text-align: right;
+  }
+
+  .u-align-left\@medium {
+    text-align: left;
+  }
+
+  .u-align-center\@medium {
+    text-align: center;
+  }
+}
+
+@media (min-width: ($breakpoint-large)) {
+   .u-align-right\@large {
+    text-align: right;
+  }
+
+  .u-align-left\@large {
+    text-align: left;
+  }
+
+  .u-align-center\@large {
+    text-align: center;
+  }
+}
+
+@media (min-width: ($breakpoint-xlarge)) {
+   .u-align-right\@xlarge {
+    text-align: right;
+  }
+
+  .u-align-left\@xlarge {
+    text-align: left;
+  }
+
+  .u-align-center\@xlarge {
+    text-align: center;
+  }
+}

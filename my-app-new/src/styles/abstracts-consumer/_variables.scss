@@ -1,0 +1,174 @@
+//
+// Consumer Variables
+// Description: Global variables re-used throught Sass/SCSS files. Changing these
+//              settings will make large changes throughout multiple Sass/SCSS files.
+//
+
+// Theme Variants
+$theme-consumer: true;
+
+// Agency Brand Colors
+$white: #fff;
+$black: #222;
+
+$gray-dark: #444;
+$gray-medium: #6d6d6d;
+$gray-light: #ccc;
+$gray-lighter: #dcdcdc;
+$accent-gray: #fcfcfc;
+$disabled-gray: #b9b9b9;
+$gray-cool: #ebf0f4;
+
+// Background Colors
+$background: #f5f5f5;
+
+// Text Links / Default Blue
+$blue: #1666af;
+$blue-dark: #1b3f60;
+
+$brand: #254b6e;
+$brand-light: #497eaf;
+
+// Actionable Icon & Selection
+$action: #0075c9;
+$action-dark: #005796;
+$action-light: #e4f4ff;
+
+$selection: #406f9a;
+
+$green: #49882c;
+$green-light: #72b325;
+$teal: #007079;
+$teal-light: #49c3b1;
+$purple: #822b8f;
+$purple-light: #b53eaa;
+$violet: #625e9c;
+$violet-light: #8b86ca;
+$orange: #de5c08;
+$orange-light: #ff8400;
+$yellow: #f6a800;
+$yellow-light: #ffc300;
+$yellow-accent: #fff3cd;
+
+$color-link: $brand;
+$color-link-hover: $brand;
+
+$alert-orange-accent: #faede0;
+$alert-orange: #ff8400;
+$alert-yellow: #ffd200;
+$alert-yellow-accent: #fff3cd;
+$alert-green: $green-light;
+$alert-green-accent: lighten($green-light, 45%);
+$alert-blue: #57c1e8;
+$alert-blue-accent: #e0ecf4;
+$alert-red: #cf102d;
+$alert-red-accent: #f1dee1;
+
+$color-primary: $brand;
+$color-success: $alert-green;
+$color-information: $alert-blue;
+$color-warning: $alert-yellow;
+$color-error: $alert-red;
+
+$color-heading: $brand;
+$color-heading--alt: $brand;
+$color-text: $black;
+$color-text--inverse: $white;
+$color-background: $brand;
+$color-btn: $orange;
+$color-btn--alt: $green-light;
+
+$overlay-color: rgba($brand, .8);
+
+//----------------------------------------------------
+// Typography
+//----------------------------------------------------
+
+$font-brand: 'Allstate Sans', Arial, Helvectica, sans-serif;
+
+$font-base: $font-brand;
+$font-sans: $font-brand;
+$font-serif: Georgia, serif;
+$font-monospace: Courier, monospace;
+
+$font-light: 300;
+$font-normal: normal;
+$font-medium: 500;
+$font-bold: bold;
+
+//----------------------------------------------------
+// Base styles
+//----------------------------------------------------
+
+// Font Sizes
+$root-font-size: 16; // used for REM base
+$root-font-size-mobile: 14; // used for less than $breakpoint-small REM base
+
+$base-font: $font-base;
+$base-font-size: 1rem;
+$base-font-size-xsmall: .75rem;
+$base-font-size-small: .875rem;
+$base-font-size-large: 1.125rem;
+$base-line-height: 1.5;
+
+// Spacing and sizing
+$base-vr: 8; // Think pixels
+$base-input-height: 32;
+$gutter: 1rem; // Used in both grid and blocks
+$base-spacing-unit: 4;
+
+//----------------------------------------------------
+// Component Styles
+//---------------------------------------------------
+
+$form-field-top-padding: 16;
+
+//----------------------------------------------------
+// Media query breakpoints
+//---------------------------------------------------
+
+$breakpoint-small: 34em; // 544px
+$breakpoint-medium: 48em; // 768px
+$breakpoint-large: 64em; // 1024px
+$breakpoint-xlarge: 90em; // 1440px
+
+//----------------------------------------------------
+// zIndex
+//----------------------------------------------------
+
+$z-index-1: 50; // background
+$z-index-2: 150; // background content
+$z-index-3: 200; // toolbar
+$z-index-4: 250; // application globals
+$z-index-5: 300; // application globals content
+$z-index-6: 350; // floating masthead
+$z-index-7: 400; // body
+$z-index-8: 450; // content
+$z-index-9: 500; // floating content
+$z-index-10: 600; // above content
+$z-index-11: 700; // overlays
+$z-index-12: 800; // modals
+$z-index-13: 900; // above modals
+$z-index-14: 1000; // alerts
+
+//----------------------------------------------------
+// Heading Sizes
+//----------------------------------------------------
+
+$heading-one: 2.25rem;
+$heading-two: 1.625rem;
+$heading-three: 1.25rem;
+$heading-four: 1.125rem;
+$heading-five: 1rem;
+$heading-six: .875rem;
+
+$display-heading-one: 2.25rem;
+$display-heading-two: 1.625rem;
+$display-heading-three: .875rem;
+
+
+//----------------------------------------------------
+// Sidebar Width
+//----------------------------------------------------
+
+$sidebar-width: 16.25rem;

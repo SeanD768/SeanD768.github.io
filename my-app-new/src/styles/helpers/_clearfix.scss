@@ -1,0 +1,7 @@
+// scss-lint:disable ImportantRule
+
+// Clearfix Helpers
+
+.u-clearfix {
+  @include clearfix;
+}

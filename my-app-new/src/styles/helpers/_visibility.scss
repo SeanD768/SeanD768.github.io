@@ -1,0 +1,48 @@
+// scss-lint:disable ImportantRule
+
+//
+// Visibility utilities
+//
+//-----------------------------------------------------------------------------
+// Hide visually, hide from screen readers, and hide from the layout
+//-----------------------------------------------------------------------------
+
+.u-invisible {
+  visibility: hidden;
+}
+
+.u-visible-hidden {
+  display: none;
+}
+
+// Print utilities
+//
+// Media queries are placed on the inside to be mixin-friendly.
+
+.u-visible-print-block {
+  display: none;
+
+  @media print {
+    display: block;
+  }
+}
+.u-visible-print-inline {
+  display: none;
+
+  @media print {
+    display: inline;
+  }
+}
+.u-visible-print-inline-block {
+  display: none;
+
+  @media print {
+    display: inline-block;
+  }
+}
+
+.u-hidden-print {
+  @media print {
+    display: none;
+  }
+}

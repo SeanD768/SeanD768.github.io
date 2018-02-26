@@ -1,0 +1,189 @@
+//
+// Core Variables
+// Description: Global variables re-used throught Sass/SCSS files. Changing these
+//              settings will make large changes throughout multiple Sass/SCSS files.
+//
+
+// Theme Variants
+$theme-agent: false !default;
+$theme-consumer: false !default;
+$theme-whitelabel: false !default;
+
+// Agency Brand Colors
+$white: #fff !default;
+$black: #222 !default;
+
+$gray-dark: #444 !default;
+$gray-medium: #6d6d6d !default;
+$gray-light: #ccc !default;
+$gray-lighter: #dcdcdc !default;
+$gray-lightest: #f5f5f5 !default;
+$accent-gray: #fcfcfc !default;
+$disabled-gray: #b9b9b9 !default;
+$gray-cool: #ebf0f4 !default;
+
+// Background Colors
+$background: #f5f5f5 !default;
+
+// Text Links / Default Blue
+$blue: #1666af !default;
+$blue-dark: #1b3f60 !default;
+
+$brand: #254b6e !default;
+$brand-light: #497eaf !default;
+
+$nav: #0096d6 !default;
+
+// Actionable Icon & Selection
+$action: #0075c9 !default;
+$action-dark: #005796 !default;
+$action-light: #e4f4ff !default;
+$action-accent: #a6cfec !default;
+
+$selection: #406f9a !default;
+
+$green: #49882c !default;
+$green-light: #72b325 !default;
+$teal: #007079 !default;
+$teal-light: #49c3b1 !default;
+$purple: #822b8f !default;
+$purple-light: #b53eaa !default;
+$violet: #625e9c !default;
+$violet-light: #8b86ca !default;
+$orange: #de5c08 !default;
+$orange-light: #ff8400 !default;
+$orange-accent: #ffd4a6 !default;
+$yellow: #f6a800 !default;
+$yellow-light: #ffc300 !default;
+$yellow-accent: #fff3cd !default;
+
+$color-link: $brand !default;
+$color-link-hover: $brand !default;
+
+$alert-orange: #ff8400 !default;
+$alert-orange-accent: #faede0 !default;
+$alert-yellow: $yellow !default;
+$alert-yellow-accent: #fff3cd !default;
+$alert-green: $green-light !default;
+$alert-green-accent: lighten($green-light, 45%) !default;
+$alert-blue: #57c1e8 !default;
+$alert-blue-accent: #e0ecf4 !default;
+$alert-red: #cf102d !default;
+$alert-red-accent: #f1dee1 !default;
+
+$color-primary: $brand !default;
+$color-success: $alert-green !default;
+$color-information: $alert-blue !default;
+$color-warning: $alert-yellow !default;
+$color-error: $alert-red !default;
+
+$color-heading: $brand !default;
+$color-heading--alt: $brand !default;
+$color-text: $black !default;
+$color-text--inverse: $white !default;
+$color-background: $brand !default;
+$color-btn: $orange !default;
+$color-btn--alt: $green-light !default;
+
+$overlay-color: rgba($brand, .8) !default;
+
+//----------------------------------------------------
+// Typography
+//----------------------------------------------------
+
+$font-brand: 'Allstate Sans', Arial, Helvectica, sans-serif !default;
+
+$font-base: $font-brand !default;
+$font-sans: $font-brand !default;
+$font-serif: Georgia, serif !default;
+$font-monospace: Courier, monospace !default;
+
+$font-light: 300 !default;
+$font-normal: normal !default;
+$font-medium: 500 !default;
+$font-bold: bold !default;
+
+//----------------------------------------------------
+// Base styles
+//----------------------------------------------------
+
+// Font Sizes
+$root-font-size: 16 !default; // used for REM base
+$root-font-size-mobile: 14 !default; // used for less than $breakpoint-small REM base
+
+$base-font: $font-base !default;
+$base-font-size: 1rem !default;
+$base-font-size-xsmall: .75rem !default;
+$base-font-size-small: .875rem !default;
+$base-font-size-large: 1.125rem !default;
+$base-line-height: 1.5 !default;
+
+// Spacing and sizing
+$base-vr: 8 !default; // Think pixels
+$base-input-height: 32 !default;
+$gutter: 1rem !default; // Used in both grid and blocks
+$base-spacing-unit: 4 !default;
+
+//----------------------------------------------------
+// Component Styles
+//---------------------------------------------------
+
+$form-field-top-padding: 16 !default;
+
+//----------------------------------------------------
+// Media query breakpoints
+//---------------------------------------------------
+
+$breakpoint-small: 34em !default; // 544px
+$breakpoint-medium: 48em !default; // 768px
+$breakpoint-large: 64em !default; // 1024px
+$breakpoint-xlarge: 90em !default; // 1440px
+
+//----------------------------------------------------
+// zIndex
+//----------------------------------------------------
+
+$z-index-1: 50 !default; // background
+$z-index-2: 150 !default; // background content
+$z-index-3: 200 !default; // toolbar
+$z-index-4: 250 !default; // application globals
+$z-index-5: 300 !default; // application globals content
+$z-index-6: 350 !default; // floating masthead
+$z-index-7: 400 !default; // body
+$z-index-8: 450 !default; // content
+$z-index-9: 500 !default; // floating content
+$z-index-10: 600 !default; // above content
+$z-index-11: 700 !default; // overlays
+$z-index-12: 800 !default; // modals
+$z-index-13: 900 !default; // above modals
+$z-index-14: 1000 !default; // alerts
+
+//----------------------------------------------------
+// Heading Sizes
+//----------------------------------------------------
+
+$heading-one: 2.25rem !default;
+$heading-two: 1.625rem !default;
+$heading-three: 1.25rem !default;
+$heading-four: 1.125rem !default;
+$heading-five: 1rem !default;
+$heading-six: .875rem !default;
+
+$display-heading-one: 2.25rem !default;
+$display-heading-two: 1.625rem !default;
+$display-heading-three: .875rem !default;
+
+
+//----------------------------------------------------
+// Sidebar Width
+//----------------------------------------------------
+
+$sidebar-width: 16.25rem !default;
+
+
+//----------------------------------------------------
+// Box Shadow
+//----------------------------------------------------
+
+$shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4) !default;
+

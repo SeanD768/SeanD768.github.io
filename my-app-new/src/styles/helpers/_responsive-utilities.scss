@@ -1,0 +1,56 @@
+// scss-lint:disable ImportantRule
+
+// Responsive Helpers
+
+.u-hidden-up\@small {
+  display: none;
+}
+
+@media (max-width: ($breakpoint-small)) {
+  .u-hidden-down\@small {
+    display: none;
+  }
+}
+/*@media (min-width: ($breakpoint-small - 1)) {
+  .u-hidden-down\@small {
+    display: none;
+  }
+}*/
+
+@media (max-width: ($breakpoint-medium)) {
+  .u-hidden-down\@medium {
+    display: none;
+  }
+}
+
+@media (min-width: ($breakpoint-medium - 1)) {
+  .u-hidden-down\@medium {
+    display: none;
+  }
+}
+
+@media (max-width: ($breakpoint-large)) {
+  .u-hidden-up\@large {
+    display: none;
+  }
+}
+@media (min-width: ($breakpoint-large - 1)) {
+  .u-hidden-up\@large {
+    display: none;
+  }
+}
+
+@media (max-width: ($breakpoint-xlarge)) {
+  .u-hidden-down\@xlarge {
+    display: none;
+  }
+}
+@media (min-width: ($breakpoint-xlarge - 1)) {
+  .u-hidden-down\@xlarge {
+    display: none;
+  }
+}
+
+.u-hidden-down\@xlarge {
+  display: none;
+}

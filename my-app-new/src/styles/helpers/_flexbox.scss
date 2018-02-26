@@ -1,0 +1,292 @@
+// scss-lint:disable ImportantRule
+
+//
+// Flexbox utilities
+//
+//-----------------------------------------------------------------------------
+// Define a flex parent and interact with children
+//-----------------------------------------------------------------------------
+
+.u-flex {
+  display: flex;
+
+  &--inline {
+    display: inline-flex;
+  }
+
+  /* Flex parent properties */
+
+  /* Align items */
+  &--top {
+    align-items: flex-start;
+  }
+
+  &--middle {
+    align-items: center;
+  }
+
+  &--bottom {
+    align-items: flex-end;
+  }
+
+  &--stretch {
+    align-items: stretch;
+  }
+
+  &--baseline {
+    align-items: baseline;
+  }
+
+  /* Justify Content */
+  &--start {
+    text-align: start;
+    justify-content: flex-start;
+  }
+
+  &--center {
+    text-align: center;
+    justify-content: center;
+  }
+
+  &--end {
+    text-align: end;
+    justify-content: flex-end;
+  }
+
+  &--around {
+    justify-content: space-around;
+  }
+
+  &--between {
+    justify-content: space-between;
+  }
+
+  /* Flex Direction */
+  &--row {
+    flex-direction: row;
+  }
+
+  &--row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--column {
+    flex-direction: column;   
+  }
+
+  &--column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  /* Flex Wrap */
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &--wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  /* Flex child properties */
+  &__item {
+    &--first {
+      order: -1;
+    }
+
+    &--last {
+      order: 2;
+    }
+  
+    /* Align self */
+    &--top {
+      align-self: flex-start;
+    }
+
+    &--middle {
+      align-self: center;
+    }
+
+    &--bottom {
+      align-self: flex-end;
+    }
+
+    &--stretch {
+      align-self: stretch;
+    }
+
+    &--baseline {
+      align-self: baseline;
+    }
+  }
+
+  &--hr {
+    & > * {
+      margin-right: .5rem; //8
+    } 
+  }
+
+  &--hr-2 {
+    & > * {
+      margin-right: 1rem; //16
+    } 
+  }
+
+  &--hr-3 {
+    & > * {
+      margin-right: 1.5rem; //24
+    }
+  }
+
+  &--hr-4 {
+    & > * {
+      margin-right: 2rem; //32
+    } 
+  }
+
+  &--hr-5 {
+    & >  * {
+      margin-right: 2.5rem; //40
+    }
+  }
+
+  &--hr-6 {
+    & > * {
+      margin-right: 3rem; //48
+    } 
+  }
+
+  &--hr-7 {
+    & > * {
+      margin-right: 3.5rem; //56
+    }
+  }
+
+  &--hr-8 {
+    & > * {
+      margin-right: 4rem; //64
+    } 
+  }
+
+  &--hr-9 {
+    & > * {
+      margin-right: 4.5rem; //72
+    }
+  }
+
+  &--hr-10 {
+    & > * {
+      margin-right: 5rem; //80
+    } 
+  }
+
+  &--hr-11 {
+    & > * {
+      margin-right: 5.5rem; //88
+    }
+  }
+
+  &--hr-12 {
+    & > * {
+      margin-right: 6rem; //96
+    } 
+  }
+
+  &--hr-13 {
+    & > * {
+      margin-right: 6.5rem; //104
+    }
+  }
+
+  &--hr-14 {
+    & > * {
+      margin-right: 7rem; //112
+    }
+  }
+
+
+  // Top vertical alignment helpers
+
+  &--hr-left {
+    & > * {
+      margin-left: .5rem; //8 top
+    }
+  }
+
+  &--hr-2-left {
+    & > * {
+      margin-left: 1rem; //16 top
+    }
+  }
+
+  &--hr-3-left {
+    & > * {
+      margin-left: 1.5rem; //24 top
+    }
+  }
+
+  &--hr-4-left {
+    & > * {
+      margin-left: 2rem; //32 top
+    }
+  }
+
+  &--hr-5-left {
+    & > * {
+      margin-left: 2.5rem; //40 top
+    }
+  }
+
+  &--hr-6-left {
+    & > * {
+      margin-left: 3rem; //48 top
+    }
+  }
+
+  &--hr-7-left {
+    & > * {
+      margin-left: 3.5rem; //56 top
+    }
+  }
+
+  &--hr-8-left {
+    & > * {
+      margin-left: 4rem; //64 top
+    }
+  }
+
+  &--hr-9-left {
+    & > * {
+      margin-left: 4.5rem; //72 top
+    }
+  }
+
+  &--hr-10-left {
+    & > * {
+      margin-left: 5rem; //80 top
+    }
+  }
+
+  &--hr-11-left {
+    & > * {
+      margin-left: 5.5rem; //88 top
+    }
+  }
+
+  &--hr-12-left {
+    & > * {
+      margin-left: 6rem; //96 top
+    }
+  }
+
+  &--hr-13-left {
+    & > * {
+      margin-left: 6.5rem; //104 top
+    }
+  }
+
+  &--hr-14-left {
+    & > * {
+      margin-left: 7rem; //112 top
+    }
+  }
+}

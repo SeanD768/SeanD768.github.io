@@ -1,0 +1,65 @@
+// Typography rules
+
+// Headings and heading classes
+h1,
+.u-h1 {
+  color: $blue-dark;
+  font-size: $heading-one;
+}
+
+h2,
+.u-h2 {
+  color: $blue-dark;
+  font-size: $heading-two;
+}
+
+h3,
+.u-h3 {
+  color: $blue-dark;
+  font-size: $heading-three;
+}
+
+h4,
+.u-h4 {
+  color: $blue-dark;
+  font-size: $heading-four;
+}
+
+h5,
+.u-h5 {
+  color: $blue-dark;
+  font-size: $heading-five;
+}
+
+h6,
+.u-h6 {
+  color: $blue-dark;
+  font-size: $heading-six;
+}
+
+// base text
+a {
+  color: $action;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: $font-bold;
+}
