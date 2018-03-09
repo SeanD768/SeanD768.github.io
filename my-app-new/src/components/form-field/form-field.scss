@@ -1,0 +1,195 @@
+@import '../../styles/main';
+
+.c-form-field {
+  display: flex;
+  flex-direction: column;
+  font-size: $base-font-size;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.c-form-field--labelless {
+  padding-top: 0;
+}
+
+.c-form-field--datepicker .c-form-field__input {
+  padding-right: rem(27);
+}
+
+.c-form-field__input,
+.c-form-field__textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: rem(1) solid $gray-medium;
+  display: block;
+  color: $black;
+  font-family: $font-brand;
+  font-size: $base-font-size;
+  height: rem($base-input-height);
+  margin: 0;
+  order: 2;
+  padding: rem(0 0 5 0);
+  position:relative;
+  text-overflow: ellipsis;
+  width: 100%;
+  z-index: $z-index-1;
+
+  &::-webkit-input-placeholder {
+    color: $disabled-gray;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: $disabled-gray;
+  }
+
+  &:-ms-input-placeholder {  /* IE */
+    color: $disabled-gray;
+  }
+
+  &::-ms-clear { /* IE 11 */
+     display: none;
+  }
+
+  &:invalid {
+    box-shadow: none;
+  }
+
+  &::-moz-submit-invalid {
+    box-shadow: none;
+  }
+
+  &::-moz-ui-invalid {
+    box-shadow: none;
+  }
+
+  &:focus ~ .c-form-field__underline {
+    left: 0;
+    right: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.c-form-field__underline {
+  background: $action;
+  bottom: 0;
+  height: rem(2);
+  left: 50%;
+  position: absolute;
+  order: 3;
+  right: 50%;
+  transition: left 200ms, right 200ms;
+  z-index: $z-index-2;
+}
+
+.has-warning.c-form-field .c-form-field__underline,
+.has-error.c-form-field .c-form-field__underline {
+  left: 0;
+  right: 0;
+}
+
+.has-warning.c-form-field .c-form-field__underline {
+  background: $orange-light;
+}
+
+.has-warning.c-form-field .c-form-field__label {
+  color: $gray-medium;
+}
+
+.has-error.c-form-field .c-form-field__underline {
+  background: $color-error;
+}
+
+.has-error.c-form-field .c-form-field__label {
+  color: $color-error;
+}
+
+.c-form-field .c-form-field__input,
+.c-form-field .c-form-field__textarea {
+  &:disabled,
+  &[disabled],
+  &[readonly] {
+    border-bottom: rem(1) dashed $gray-light;
+    opacity: 1;
+
+    & ~ .c-form-field__underline {
+      background: transparent;
+    }
+
+    & ~ .c-form-field__label {
+      color: $disabled-gray;
+    }
+
+    &:hover {
+     opacity: 1;
+    }
+
+    &:not([readonly]) {
+      color: $gray-light;
+    }
+  }
+}
+
+.is-loading.c-form-field .c-form-field__underline {
+  animation: formfieldloading 1s infinite;
+}
+
+.c-form-field__textarea {
+  height: auto;
+  max-height: none;
+  min-height: rem(48);
+  overflow: auto;
+  resize: none;
+
+  &--auto-expand {
+    overflow: hidden;
+  }
+}
+
+.c-form-field__label {
+  color: $gray-medium;
+  display: block;
+  font-weight: $font-medium;
+  font-size: rem(14);
+  order: 1;
+  overflow: hidden;
+  text-align: left;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 0;
+}
+
+.c-form-field--filled {
+  .c-form-field__label {
+    background-color: transparent;
+    transform: translateY(0);
+
+    &:before {
+      transform: scale(0,1);
+    }
+  }
+
+  .c-form-field__input,
+  .c-form-field__textarea {
+    &[readonly] {
+      &:focus {
+        & ~ .c-form-field__label {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+.c-form-field--right-aligned {
+  .c-form-field__input,
+  .c-form-field__textarea {
+    text-align: right;
+  }
+}

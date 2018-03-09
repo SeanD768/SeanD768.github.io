@@ -1,0 +1,39 @@
+{
+  "name": "Avatar",
+  "folderName": "avatar",
+  "category": "Imagery",
+  "lastUpdated": "0.8.0",
+  "importSnippet": "import { Avatar } from 'react-pattern-library';",
+  "componentType": "CSS",
+  "stability": "stable",
+  "overview": "This is an avatar for peoples faces.",
+  "dependencies": ["Button", "Avatar"],
+  "devGuidelines": [
+    "do better",
+    "Try harder"
+  ],
+  "designGuidelines": [
+    "do better",
+    "Try harder"
+  ],
+  "accessibilityGuidelines": [
+    "do better",
+    "Try harder"
+  ],
+  "componentProps": [
+    {
+      "name": "",
+      "desc": "",
+      "type": "",
+      "required": "",
+      "defaultValue": ""
+    }
+  ],
+  "cssModifiers": [
+    {
+      "name": "Small",
+      "modifier": "c-avatar__image--sm",
+      "desc": "Reduces the default size to small."
+    }
+  ]
+}

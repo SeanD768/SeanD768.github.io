@@ -1,0 +1,39 @@
+{
+  "name": "Form Upload",
+  "folderName": "form-upload",
+  "category": "Inputs",
+  "lastUpdated": "1.7.0",
+  "importSnippet": "import { FormUpload } from 'react-pattern-library';",
+  "componentType": "JSX",
+  "stability": "unstable",
+  "overview": "This provides a UI layer for file uploads.",
+  "dependencies": ["Box"],
+  "devGuidelines": [
+    "do better",
+    "Try harder"
+  ],
+  "designGuidelines": [
+    "do better",
+    "Try harder"
+  ],
+  "accessibilityGuidelines": [
+    "do better",
+    "Try harder"
+  ],
+  "componentProps": [
+    {
+      "name": "onFileUpload",
+      "desc": "Callback function passing file data as a parameter.",
+      "type": "Func",
+      "required": "no",
+      "defaultValue": ""
+    }
+  ],
+  "cssModifiers": [
+    {
+      "name": "Small",
+      "modifier": "c-avatar__image--sm",
+      "desc": "Reduces the default size to small."
+    }
+  ]
+}
