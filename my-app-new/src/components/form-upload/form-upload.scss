@@ -1,0 +1,187 @@
+@import '../../styles/main';
+
+.c-form-upload {
+  align-items: center;
+  border-radius: rem(2);
+  display: flex;
+  position: relative;
+
+  &__input {
+    cursor: pointer;
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    z-index: $z-index-2;
+
+    &:hover,
+    &:focus {
+      & ~ .c-form-upload__label {
+        .c-form-upload__btn {
+          box-shadow: rem(0 0 0 5) $action-accent
+        }
+      }
+    }
+
+    &[disabled] {
+      opacity: 0;
+
+      &:hover,
+      &:focus {
+        & ~ .c-form-upload__label {
+          .c-form-upload__btn {
+            box-shadow: none;
+          }
+        }
+      }
+
+      & ~ .c-form-upload__icon {
+          path {
+            fill: $disabled-gray;
+          }
+        }
+
+      & ~ .c-form-upload__label {
+        color: $disabled-gray;
+
+        .c-form-upload__btn {
+          background: $disabled-gray;
+          color: $white;
+          opacity: .5;
+        }
+      }
+    }
+  }
+
+  &__name {
+    position: relative;
+  }
+
+  &__icon {
+    position: relative;
+    z-index: $z-index-1;
+  }
+
+  &__text {
+    position: relative;
+  }
+
+  &__label {
+    color: $gray-medium;
+  }
+
+  &.has-error {
+    border: 0;
+
+    .c-form-upload__btn {
+      border: rem(2) solid $color-error;
+    }
+  }
+
+  &.has-warning {
+    border: 0;
+
+    .c-form-upload__btn {
+      border: rem(2) solid $orange-light;
+    }
+  }
+
+  &--dropzone {
+    border: rem(2) dashed $gray-light;
+    border-radius: rem(4);
+    flex-direction: column;
+    font-size: $base-font-size;
+    justify-content: center;
+    padding: rem(16);
+    max-width: 100%;
+    width: 100%;
+
+    .c-form-upload__icon {
+      position: relative;
+      z-index: $z-index-1;
+    }
+
+    .c-form-upload__input {
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+
+      &:hover,
+      &:focus {
+        & ~ .c-form-upload__label {
+           &::before {
+            box-shadow: rem(0 0 0 5) $action-accent;
+          }
+        }
+      }
+
+      &:active {
+        & ~ .c-form-upload__label {
+           &::before {
+            background: $action-accent;
+            box-shadow: none;
+          }
+        }
+      }
+
+      &[disabled] {
+        opacity: 0;
+
+        & ~ .c-form-upload__label {
+          color: $disabled-gray;
+          opacity: 1;
+
+          &::before {
+            background: $gray-lighter;
+            box-shadow: none;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .c-form-upload__label {
+      &::before {
+        content: '';
+        background: $gray-lightest;
+        bottom: 0;
+        border-radius: rem(2);
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: background .3s ease, box-shadow .3s ease;
+        width: 100%;
+      }
+
+      &__text {
+        position: relative;
+      }
+    }
+
+    .c-form-upload__underline {
+      background: $action;
+      bottom: 0;
+      height: rem(2);
+      left: 50%;
+      position: absolute;
+      right: 50%;
+      transition: left 200ms, right 200ms;
+      z-index: $z-index-1;
+
+      .is-loading & {
+        animation: formfieldloading 1s infinite;
+      }
+    }
+
+    &.has-warning {
+      border: rem(2) solid $orange-light;
+    }
+
+    &.has-error {
+      border: rem(2) solid $color-error;
+    }
+  }
+}

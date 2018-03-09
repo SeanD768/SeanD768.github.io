@@ -1,0 +1,224 @@
+{
+  "name": "Form Field",
+  "altName": ["Input", "Field", "Textbox"],
+  "description": "A Form Field is to elicit a response in the form of string and number.",
+  "sourceUrl": "form-field",
+  "category": "Inputs",
+  "lastUpdated": "x.x.x",
+  "importSnippet": "import { FormField } from 'react-pattern-library';",
+  "componentType": "CSS",
+  "stability": "unstable",
+  "dependencies": ["Hint", "Label"],
+  "nestedDependencies": [],
+  "devGuidelinesDo": [],
+  "devGuidelinesDoNot": [],
+  "designGuidelinesDo": [
+    "Fields should have labels vertical orientation.",
+    "Arrange text fields within a two column layout.",
+    "If there are character limits, use the Count Down variant.",
+    "When possible, use field lengths that correspond to the information the user is inputting."
+  ],
+  "designGuidelinesDoNot": [
+    "Three (plus) column layouts since multi-column layouts increase user errors.",
+    "Default information within the input area."
+  ],
+  "accessibilityGuidelines": [],
+  "componentProps": [
+    {
+      "name": "type",
+      "desc": "Set to \"textarea\" to render a textarea.",
+      "type": "string",
+      "required": "no",
+      "defaultValue": "text"
+    },
+    {
+      "name": "placeholder",
+      "desc": "Specifies the form fields placeholder text.",
+      "type": "string",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "onChange",
+      "desc": "Specifies an onChange event to be triggered when input value is changed.",
+      "type": "function",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "preventPaste",
+      "desc": "Will prevent data from being pasted into the input from the clipboard.",
+      "type": "bool",
+      "required": "no",
+      "defaultValue": "false"
+    },
+    {
+      "name": "id",
+      "desc": "The input ID represents the JSON property that the input value is mapped to.",
+      "type": "string",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "label",
+      "desc": "Specifies the Form Field's label text.",
+      "type": "string",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "value",
+      "desc": "Specifies the value to be supplied to the input field.",
+      "type": "string | number",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "required",
+      "desc": "Specifies whether the Form Field is required.",
+      "type": "bool",
+      "required": "no",
+      "defaultValue": "false"
+    },
+    {
+      "name": "regex",
+      "desc": "Prevents non-matching characters from being input.",
+      "type": "object | array",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "rows",
+      "desc": "Defines the height of rows displayed in the \"textarea\" type.",
+      "type": "bool",
+      "required": "no",
+      "defaultValue": "false"
+    },
+    {
+      "name": "className",
+      "desc": "Appends custom CSS classes to component.",
+      "type": "string",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "hasError",
+      "desc": "Enables the error state.",
+      "type": "bool",
+      "required": "no",
+      "defaultValue": "false"
+    },
+    {
+      "name": "warningText",
+      "desc": "Adds warning text below Form Field.",
+      "type": "string",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "helpText",
+      "desc": "Adds help text below Form Field.",
+      "type": "string",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "errorText",
+      "desc": "Adds error text below Form Field.",
+      "type": "string",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "maxLength",
+      "desc": "Specify a maximum number of characters for the input.",
+      "type": "number",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "showCharCount",
+      "desc": "Displays a hint below the Form Field which will count down the amount characters left.",
+      "type": "bool",
+      "required": "no",
+      "defaultValue": "false"
+    },
+    {
+      "name": "successText",
+      "desc": "Adds success text below Form Field.",
+      "type": "string",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "hasWarning",
+      "desc": "Enables the warning state.",
+      "type": "bool",
+      "required": "no",
+      "defaultValue": "false"
+    },
+    {
+      "name": "isLoading",
+      "desc": "Adds a loading underline to the field. This should be used with \"disabled\" or \"readOnly\".",
+      "type": "bool",
+      "required": "no",
+      "defaultValue": "false"
+    },
+    {
+      "name": "onBlur",
+      "desc": "Specifies an onBlur event to be triggered when input value is blurred.",
+      "type": "function",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "onKeyDown",
+      "desc": "Specifies an onKeyDown event to be triggered when input value is changed with a key press.",
+      "type": "function",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "onPaste",
+      "desc": "Specifies an onPaste event to be triggered when input value is changed with a clipboard paste.",
+      "type": "function",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "name",
+      "desc": "Adds the input name attribute value.",
+      "type": "string",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "aria-describedby",
+      "desc": "Indicates the ID of the input to describe the object.",
+      "type": "string",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "disabled",
+      "desc": "Adds the disabled attribute to the input.",
+      "type": "bool",
+      "required": "no",
+      "defaultValue": ""
+    },
+    {
+      "name": "readOnly",
+      "desc": "Adds the readOnly attribute to the input.",
+      "type": "bool",
+      "required": "no",
+      "defaultValue": ""
+    }
+  ],
+  "cssModifiers": [
+    {
+      "name": "Right Aligned",
+      "modifier": "c-form-field--right-aligned",
+      "desc": "Right justifies the input text."
+    }
+  ]
+}

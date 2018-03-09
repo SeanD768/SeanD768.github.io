@@ -1,0 +1,57 @@
+@import '../../styles/abstracts/main';
+
+.c-label {
+  color: $gray-medium;
+  display: block;
+  font-weight: $font-medium;
+  font-size: rem(14);
+  text-align: left;
+  white-space: normal;
+
+  &__asterisk {
+    font-size: 1.57em;
+    line-height: 0;
+    top: rem(1);
+    margin-right: rem(4);
+    position: relative;
+    vertical-align: middle;
+  }
+
+  &--highlight {
+    color: $alert-green;
+    font-weight: $font-bold;
+    height: 1rem;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      display: inline-block;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        height: 0;
+        border-top: rem(3) solid $alert-green;
+        top: rem(10);
+        width: 20rem;
+      }
+
+      &:before {
+        right: 100%;
+        margin-right: rem(8);
+      }
+
+      &:after {
+        left: 100%;
+        margin-left: rem(8);
+      }
+    }
+  }
+}
+
+.c-label--agreeable {
+  color: inherit;
+}
