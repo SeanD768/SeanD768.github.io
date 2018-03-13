@@ -11,27 +11,27 @@ const defaultOptionYear = {
   };
   
   const makes = [
+  { text: 'Alfa Romeo', value: 'Alfa Romeo'},      
   { text: 'Audi', value: 'Audi' },
   { text: 'BMW', value: 'BMW'},
+  { text: 'Dodge', value: 'Dodge'},  
+  { text: 'Ferrari', value: 'Ferrari' }, 
+  { text: 'Mitsubishi', value: 'Mitsubishi' },  
   { text: 'Tesla', value: 'Tesla' },
-  { text: 'Alfa Romeo', value: 'Alfa Romeo'},
-  { text: 'Ferrari', value: 'Ferrari' },
-  { text: 'Dodge', value: 'Dodge'},
-  { text: 'Mitsubishi', value: 'Mitsubishi' },
   { text: 'Toyota', value: 'Toyota'},
   
   ];
   
   
   const models = [
+  { text: 'Lancer', value: 'Lancer' },   
+  { text: 'Model S', value: 'Model S' }, 
+  { text: 'M6', value: 'M6 '},  
   { text: 'R8', value: 'R8' },
-  { text: 'M6', value: 'M6 '},
-  { text: 'Model S', value: 'Model S' },
+  { text: 'Supra', value: 'Supra'},  
+  { text: 'Viper', value: 'Viper'},  
   { text: '4C Spider', value: '4C Spider'},
   { text: '458 Italia', value: '458 Italia' },
-  { text: 'Viper', value: 'Viper'},
-  { text: 'Lancer', value: 'Lancer' },
-  { text: 'Supra', value: 'Supra'},
 
   ];
 
