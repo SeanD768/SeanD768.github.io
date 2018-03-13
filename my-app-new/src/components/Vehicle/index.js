@@ -38,15 +38,25 @@ const defaultOptionYear = {
 class Vehicle extends Component {
     constructor(props){
         super(props);
+        this.focusModelSelection = this.focusModelSelection.bind(this);        
         this.state = {
           makeDisabled: true,
           modelDisabled: true,
           yearValue: '',          
           makeValue: '',
           modelValue: '',
-
+          //buttonDisabled: true,
         };
       }
+
+
+      focusModelSelection() {
+        console.log("Focus function is running")
+        this.ModelSelection.focus();                
+        
+      }
+
+
 
       enableMake = (event) => {
         console.log("The Make is now enabled");
@@ -55,21 +65,22 @@ class Vehicle extends Component {
         this.setState({makeValue: ''})              
         this.setState({ modelDisabled: true});
         this.setState({ makeDisabled: false });
+        this.setState({ buttonDisabled: false});
         
-        //this.setState({ })
       }
 
-      enableModel = (event) => {
+      enableModel = (event, focusModelSelection) => {
         console.log("The Model is now enabled");
         console.log(event.value);
         const value = event.value;
         this.setState({ makeValue: value });
         this.setState({modelValue: ''});
         this.setState({ modelDisabled: false });
-        this.textInput.focusTextInput();
+        //this.ModelSelection.focus();                
     }
 
       enableComplete = (event) => {
+        console.log(event.value);
         const value = event.value;                
         this.setState({ modelValue: value });
         }
@@ -83,11 +94,13 @@ class Vehicle extends Component {
             const {
                 enableMake,
                 enableModel,
+                focusModelSelection,
             } = this;
 
             const {
                 makeDisabled,
                 modelDisabled,
+                buttonDisabled
             } = this.state;
 
     
@@ -115,9 +128,10 @@ class Vehicle extends Component {
             <div className="flex-container">
             <Autocomplete
             className="flex-item-1"                        
-            label="Makes"
+            //label="Makes"
+            placeholder="Make"
             value={ this.state.makeValue }
-            //minFilterValueLength={ 3 }
+            minFilterValueLength={ 3 }
             suggestions={ makes }
             onClickSuggestion={(event) => {this.enableModel(event)}}
             disabled={this.state.makeDisabled}
@@ -126,13 +140,15 @@ class Vehicle extends Component {
 
             <Autocomplete
             className="flex-item-2"
-            label="Models"
+            //label="Models"
+            placeholder="Model"
             value={ this.state.modelValue }
-            //minFilterValueLength={ 3 }
+            minFilterValueLength={ 3 }
             suggestions={ models }
+            //ref={(input) => {this.ModelSelection = input; }}            
             disabled={this.state.modelDisabled}
             onClickSuggestion={(event) => {this.enableComplete(event)}}
-            ref={(input) => { this.textInput = input; }}
+
             />
 
             </div>
@@ -140,7 +156,11 @@ class Vehicle extends Component {
             <div id="ButtonBreak"/>
 
 
-            <Button className="btn" text="Add"/>
+            <Button className="btn" text="Add" disabled={this.state.buttonDisabled}/>
+
+            {/* <input type="text" ref={(input) => {this.ModelSelection = input; }} /> */}
+            {/* <input type="button" onClick={this.focusModelSelection} /> */}
+
 
 
          </div>
