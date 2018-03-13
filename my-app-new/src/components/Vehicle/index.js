@@ -22,7 +22,6 @@ const defaultOptionYear = {
   
   ];
   
-  
   const models = [
   { text: 'Lancer', value: 'Lancer' },   
   { text: 'Model S', value: 'Model S' }, 
@@ -62,8 +61,9 @@ class Vehicle extends Component {
         console.log("The Make is now enabled");
         const value = event.target.value;
         this.setState({ yearValue: value });  
-        this.setState({makeValue: ''})              
-        this.setState({ modelDisabled: true});
+        this.setState({makeValue: ''})
+        this.setState({ modelValue: ''})              
+        this.setState({ modelDisabled: true });
         this.setState({ makeDisabled: false });
         this.setState({ buttonDisabled: false});
         
@@ -127,7 +127,7 @@ class Vehicle extends Component {
 
             <div className="flex-container">
             <Autocomplete
-            className="flex-item-1"                        
+            inputclassName="flex-item-1"                      
             //label="Makes"
             placeholder="Make"
             value={ this.state.makeValue }
@@ -139,7 +139,7 @@ class Vehicle extends Component {
 
 
             <Autocomplete
-            className="flex-item-2"
+            inputclassName="flex-item-2"
             //label="Models"
             placeholder="Model"
             value={ this.state.modelValue }
