@@ -253,6 +253,7 @@ export default class FormField extends FormControl {
    minLength: PropTypes.number,
    name: PropTypes.string,
    placeholder: PropTypes.string,
+   inputclassName: PropTypes.string,
    regex: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array,
@@ -492,6 +493,7 @@ export default class FormField extends FormControl {
       onValidate,
       hidden,
       placeholder,
+      inputclassName,
       preventPaste,
       showCharCount,
       maxLength,
@@ -557,7 +559,7 @@ export default class FormField extends FormControl {
               { ...other }
               id={ id }
               ref={ (input) => { this.formField = input; } }
-              className="c-form-field__input"
+              className={ inputclassName }
               name={ name }
               required={ required }
               maxLength={ maxLength }
