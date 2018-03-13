@@ -45,7 +45,7 @@
     -moz-appearance: none;
     appearance: none;
     background-color: transparent;
-    border-bottom: 0.0625rem solid #6B7789;
+    /*border-bottom: 0.0625rem solid #6B7789;*/
     display: block;
     color: #222;
     font-family: "Allstate Sans", Arial, Helvectica, sans-serif;
@@ -66,7 +66,7 @@
     -moz-appearance: none;
     appearance: none;
     background-color: transparent;
-    border-bottom: 0.0625rem solid #6B7789;
+    border-right: 0.0625rem solid #A6A6A6;
     display: block;
     color: #222;
     font-family: "Allstate Sans", Arial, Helvectica, sans-serif;
@@ -74,6 +74,7 @@
     text-overflow: ellipsis;
     width: 75%;
     z-index: 50;    
+    
   }
 
 
