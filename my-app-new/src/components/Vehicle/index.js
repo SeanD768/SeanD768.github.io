@@ -135,7 +135,7 @@ class Vehicle extends Component {
             inputclassName="flex-item-1"
             inputRef={(input) => {this.textInput = input; }}
             //label="Makes"
-            placeholder="Make"
+            placeholder="Make                  /"
             value={ this.state.makeValue }
             minFilterValueLength={ 3 }
             suggestions={ makes }
@@ -143,10 +143,11 @@ class Vehicle extends Component {
             disabled={this.state.makeDisabled}
             />
 
-            <input className="flex-item-3" placeholder="/" disabled="true"/>
+          {/*   <input className="flex-item-2" placeholder="/" disabled={true}/> */}
 
+            
             <Autocomplete
-            inputclassName="flex-item-2"
+            inputclassName="flex-item-3"
             //label="Models"
             placeholder="Model"
             value={ this.state.modelValue }
@@ -164,7 +165,7 @@ class Vehicle extends Component {
 
             <Button className="btn" text="Add" disabled={this.state.buttonDisabled}/>
 
-           {/*  <input type="text" ref={(input) => {this.textInput = input; }} /> */}
+           <input type="text" ref={(input) => {this.textInput = input; }} />
 
 
 
