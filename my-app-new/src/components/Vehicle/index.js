@@ -135,7 +135,7 @@ class Vehicle extends Component {
             inputclassName="flex-item-1"
             inputRef={(input) => {this.textInput = input; }}
             //label="Makes"
-            placeholder="Make                  /"
+            placeholder="Make                     /"
             value={ this.state.makeValue }
             minFilterValueLength={ 3 }
             suggestions={ makes }
