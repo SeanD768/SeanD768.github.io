@@ -609,6 +609,7 @@ export default class Autocomplete extends React.Component {
       suggestionListID,
       _onClickSuggestion,
       _onInput,
+      inputRef,
       _onKeyDown,
       _clearAutocomplete,
     } = this;
@@ -622,12 +623,14 @@ export default class Autocomplete extends React.Component {
           { ...other }
           _formValidateOnBlur={false}
           id={ id }
-          ref={ (formField) => {
+         /* ref={ (formField) => {
             if (!formField) {
               return;
             }
             this.formField = formField.formField;
-          } }
+          } }  */
+
+          ref={ inputRef }
           role="combobox"
           aria-expanded={ isActive ? 'true' : 'false' }
           aria-autocomplete="both"
