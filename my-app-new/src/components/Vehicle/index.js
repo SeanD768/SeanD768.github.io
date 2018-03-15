@@ -85,8 +85,9 @@ class Vehicle extends Component {
         console.log(event.value);
         const value = event.value;                
         this.setState({ modelValue: value });
-      
-      }
+        const makeValue = this.state.makeValue;
+        const modelValue = this.state.modelValue;
+        console.log(modelValue, makeValue);      }
 
 
 
@@ -133,9 +134,9 @@ class Vehicle extends Component {
 
             <div className="input-border">
 
-            <div className="flex-container">
+            <div className="grid-container">
             <Autocomplete
-            inputclassName="flex-item-1"
+            inputclassName="grid-item-1"
             //inputRef={(input) => {this.textInput = input; }}
             ref={(input) => {this.textInput = input; }}
             //label="Makes"
@@ -148,10 +149,10 @@ class Vehicle extends Component {
             />
 
 
-            <p className="flex-item-2"> / </p>
+            <p className="grid-item-2"> / </p>
             
             <Autocomplete
-            inputclassName="flex-item-3"
+            inputclassName="grid-item-3"
             //label="Models"
             placeholder="Model"
             value={ this.state.modelValue }
@@ -168,7 +169,7 @@ class Vehicle extends Component {
             <div id="ButtonBreak"/>
 
 
-            <Button className="btn" text="Add" disabled={this.state.buttonDisabled}/>
+            <Button className="btn" text="Add" disabled={this.state.buttonDisabled} onClick={this.enableComplete}/>
 
            {/* <input type="text" ref={(input) => {this.textInput = input; }} /> */}
 

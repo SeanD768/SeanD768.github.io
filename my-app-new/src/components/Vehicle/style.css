@@ -1,10 +1,11 @@
 .selectcontainer {
   
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
   
   }
   
+
   .input-border {
 
     border-width: 1px 1px 1px 0; 
@@ -28,7 +29,7 @@
   }
   
   
-  .flex-container {
+  .grid-container {
   
       display: grid;
       grid-template-columns: 5fr 2fr 5fr;
@@ -38,9 +39,9 @@
     }
 
   
-  .flex-item-1 {
-  
-      font-size: 0.9em;
+  .grid-item-1 {
+      padding: 20px;
+      font-size: 0.8em;
       -webkit-appearance: none;
       -moz-appearance: none;
       border: transparent;    
@@ -56,17 +57,19 @@
   }
   
 
-    .flex-item-2 {
+    .grid-item-2 {
     
-      color: #757575;
       width: auto;
+      font-size: 0.8em;
+      
       }
 
 
   
-    .flex-item-3 {
+    .grid-item-3 {
       
-      font-size: 0.9em;
+      padding: 20px;
+      font-size: 0.8em;
       -webkit-appearance: none;
       -moz-appearance: none;
       border: none;
@@ -83,11 +86,12 @@
 
 
 
-  
 
 
 
 
+
+    
 
 .u-sr-only {
 
