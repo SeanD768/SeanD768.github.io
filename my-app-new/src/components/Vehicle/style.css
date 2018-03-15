@@ -5,6 +5,14 @@
   
   }
   
+  .input-border {
+
+    border-width: 1px 1px 1px 0; 
+    border: 1px solid #9A9A9A;
+    border-radius: 5px 5px 5px 5px;
+
+  }
+
   
   #Break {
   
@@ -22,84 +30,63 @@
   
   .flex-container {
   
-      display: flex;
-  
-  }
-  
-  .flex-item-1{
-  
-      border-width: 1px 0 1px 1px; 
-      border-radius: 5px 0px 0 5px;
-      padding: 20px;
-      font-size: 0.9em;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      background-color: transparent;
-      /*border-bottom: 0.0625rem solid #6B7789;*/
-      display: block;
-      color: #222;
-      font-family: "Allstate Sans", Arial, Helvectica, sans-serif;
-      position: relative;
-      text-overflow: ellipsis;
-      width: 82%;
-      z-index: 50;
-  
-  }
-  
-  
-  .flex-item-2 {
-    
-      border-width: 1px 0 1px 0; 
-      border-radius: 0 0 0 0;
-      padding: 20px;
-      font-size: 0.9em;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      background-color: transparent;    
-      display: block;
-      color: #222;
-      font-family: "Allstate Sans", Arial, Helvectica, sans-serif;
-      position: relative;
-      text-overflow: ellipsis;
-      text-align: center;
-      width: 40%;
-      z-index: 50;    
-      
+      display: grid;
+      grid-template-columns: 5fr 2fr 5fr;
+      grid-template-rows: 1fr;
+      align-items: center;
+      justify-content: center;
     }
+
   
+  .flex-item-1 {
   
-    .flex-item-3{
-      
-      border-width: 1px 1px 1px 0; 
-      border-radius: 0 5px 5px 0;
-      padding: 20px;
       font-size: 0.9em;
       -webkit-appearance: none;
       -moz-appearance: none;
-      appearance: none;
+      border: transparent;    
       background-color: transparent;
-      border-right: 0.0625rem solid #A6A6A6;
-      display: block;
+      display: block; 
       color: #222;
       font-family: "Allstate Sans", Arial, Helvectica, sans-serif;
       position: relative;
       text-overflow: ellipsis;
-      width: 75%;
-      z-index: 50;    
-      
+      z-index: 50;
+      box-sizing: border-box;
+      width:100%;
+  }
+  
+
+    .flex-item-2 {
+    
+      color: #757575;
+      width: auto;
       }
 
-/* 
 
-.flex-item-1:disabled, .flex-item-2:disabled {
+  
+    .flex-item-3 {
+      
+      font-size: 0.9em;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: none;
+      background-color: transparent;
+      display: block;
+      color: #222;
+      font-family: "Allstate Sans", Arial, Helvectica, sans-serif;
+      position: relative;
+      text-overflow: ellipsis;
+      z-index: 50;
+      box-sizing: border-box;
+      width: 100%;
+      }
 
-background-color: #efefee;
-color: #efefee;
-}
 
-*/
+
+  
+
+
+
 
 
 .u-sr-only {
