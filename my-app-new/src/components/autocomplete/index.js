@@ -643,12 +643,7 @@ export default class Autocomplete extends React.Component {
           hasError={ _hasError }
           onInput={ _onInput }
          />
-         <button
-          type="button"
-          onClick={ _clearAutocomplete }
-          className={`c-btn c-btn--icon c-autocomplete__clear ${clearBtn ? 'is-active' : ''} ${!label ? 'c-autocomplete__clear--no-label' : ''}`}>
-            <Icon size={.7} icon="cross" />
-         </button>
+
         <ul
           role="listbox"
           tabIndex="-1"
