@@ -609,7 +609,6 @@ export default class Autocomplete extends React.Component {
       suggestionListID,
       _onClickSuggestion,
       _onInput,
-      inputRef,
       _onKeyDown,
       _clearAutocomplete,
     } = this;
@@ -623,14 +622,12 @@ export default class Autocomplete extends React.Component {
           { ...other }
           _formValidateOnBlur={false}
           id={ id }
-         /* ref={ (formField) => {
+          ref={ (formField) => {
             if (!formField) {
               return;
             }
             this.formField = formField.formField;
-          } }  */
-
-          ref={ inputRef }
+          } }
           role="combobox"
           aria-expanded={ isActive ? 'true' : 'false' }
           aria-autocomplete="both"
@@ -643,7 +640,12 @@ export default class Autocomplete extends React.Component {
           hasError={ _hasError }
           onInput={ _onInput }
          />
-
+         <button
+          type="button"
+          onClick={ _clearAutocomplete }
+          className={`c-btn c-btn--icon c-autocomplete__clear ${clearBtn ? 'is-active' : ''} ${!label ? 'c-autocomplete__clear--no-label' : ''}`}>
+            <Icon size={.7} icon="cross" />
+         </button>
         <ul
           role="listbox"
           tabIndex="-1"
