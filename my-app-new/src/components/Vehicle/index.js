@@ -35,10 +35,10 @@ const defaultOptionYear = {
 
   ];
 
+
 class Vehicle extends Component {
     constructor(props){
         super(props);
-        this.focusTextInput = this.focusTextInput.bind(this);
         this.state = {
           makeDisabled: true,
           modelDisabled: true,
@@ -50,12 +50,16 @@ class Vehicle extends Component {
       }
 
 
+       
+     /* componentDidMount() {
 
-
-      focusTextInput = (event) => {
         this.textInput.focus();
+        
+      } */
 
-      }
+
+
+
 
 
 
@@ -68,7 +72,7 @@ class Vehicle extends Component {
         this.setState({ modelDisabled: true });
         this.setState({ makeDisabled: false });
         this.setState({ buttonDisabled: false});
-        this.textInput.focus();  
+        this.makeInput.focus();  
         
       }
 
@@ -78,15 +82,16 @@ class Vehicle extends Component {
         this.setState({ makeValue: value });
         this.setState({modelValue: ''});
         this.setState({ modelDisabled: false });
+        this.modelInput.focus();
 
       }
 
       enableComplete = (event) => {
+        console.log(this.state.makeValue, this.state.modelValue);              
         const value = event.value;                
         this.setState({ modelValue: value });
         const makeValue = this.state.makeValue;
         const modelValue = this.state.modelValue;
-        console.log(this.state.makeValue, this.state.modelValue);      
       
       }
 
@@ -139,7 +144,7 @@ class Vehicle extends Component {
             <Autocomplete
             inputclassName="grid-item-1"
             placeholder="Make"
-            inputRef={(input) => {this.textInput = input; }}                        
+            inputRef={(input) => {this.makeInput = input; }}                        
             value={ this.state.makeValue }
             minFilterValueLength={ 3 }
             suggestions={ makes }
@@ -153,6 +158,7 @@ class Vehicle extends Component {
             <Autocomplete
             inputclassName="grid-item-3"
             placeholder="Model"
+            inputRef={(input) => {this.modelInput = input; }}
             value={ this.state.modelValue }
             minFilterValueLength={ 3 }
             suggestions={ models }
@@ -169,7 +175,7 @@ class Vehicle extends Component {
 
             <Button className="btn" text="Add" disabled={this.state.buttonDisabled} />
 
-           <input type="text" ref={(input) => {this.textInput = input; }} />
+          {/* <input type="text" ref={(input) => {this.textInput = input; }} /> */}
 
 
          </div>
