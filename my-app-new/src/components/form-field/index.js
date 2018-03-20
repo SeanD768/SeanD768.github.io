@@ -560,8 +560,8 @@ export default class FormField extends FormControl {
             <input
               { ...other }
               id={ id }
-              ref={ inputRef }
-              //ref={ (input) => { this.formField = input; } }
+              //ref={ inputRef }
+              ref={ (input) => { this.formField = input; } }
               className={ inputclassName }
               name={ name }
               required={ required }

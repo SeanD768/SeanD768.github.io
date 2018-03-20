@@ -50,40 +50,29 @@ class Vehicle extends Component {
       }
 
 
-       
-     /* componentDidMount() {
-
-        this.textInput.focus();
-        
-      } */
-
-
-
-
-
 
 
       enableMake = (event) => {
-        console.log("The Make is now enabled");
+        // console.log("The Make is now enabled");
         const value = event.target.value;
         this.setState({ yearValue: value });  
         this.setState({makeValue: ''})
         this.setState({ modelValue: ''})              
         this.setState({ modelDisabled: true });
         this.setState({ makeDisabled: false });
-        this.setState({ buttonDisabled: false});
-        this.makeInput.focus();  
-        
+        this.setState({ buttonDisabled: false}, () => {
+           this.makeInput.formField.focus();
+        });
       }
 
-      enableModel = (event, focusModelSelection) => {
+      enableModel = (event) => {
         console.log("The Model is now enabled");
         const value = event.value;
         this.setState({ makeValue: value });
         this.setState({modelValue: ''});
-        this.setState({ modelDisabled: false });
-        this.modelInput.focus();
-
+        this.setState({ modelDisabled: false }, () => {
+          this.modelInput.formField.focus();
+        })
       }
 
       enableComplete = (event) => {
@@ -92,8 +81,9 @@ class Vehicle extends Component {
         this.setState({ modelValue: value });
         const makeValue = this.state.makeValue;
         const modelValue = this.state.modelValue;
-      
+
       }
+
 
 
 
@@ -131,7 +121,7 @@ class Vehicle extends Component {
             { text: '2010', value: '2010', }
             ] }
             value={this.state.yearValue}
-            onChange={(event) => {this.enableMake(event)}}
+            onChange={this.enableMake}
             required 
             /> 
 
@@ -144,7 +134,7 @@ class Vehicle extends Component {
             <Autocomplete
             inputclassName="grid-item-1"
             placeholder="Make"
-            inputRef={(input) => {this.makeInput = input; }}                        
+            ref={(input) => {this.makeInput = input; }}                        
             value={ this.state.makeValue }
             minFilterValueLength={ 3 }
             suggestions={ makes }
@@ -158,13 +148,12 @@ class Vehicle extends Component {
             <Autocomplete
             inputclassName="grid-item-3"
             placeholder="Model"
-            inputRef={(input) => {this.modelInput = input; }}
+            ref={input => {this.modelInput = input; }}
             value={ this.state.modelValue }
             minFilterValueLength={ 3 }
             suggestions={ models }
             disabled={this.state.modelDisabled}
             onClickSuggestion={(event) => {this.enableComplete(event)}}
-
             />
 
             </div>
@@ -175,7 +164,8 @@ class Vehicle extends Component {
 
             <Button className="btn" text="Add" disabled={this.state.buttonDisabled} />
 
-          {/* <input type="text" ref={(input) => {this.textInput = input; }} /> */}
+          {/* <input type="text" ref={(input) => {this.makeInput = input; }} /> */}
+          {/* <input type="text" ref={(input) => {this.modelInput = input; }} /> */}
 
 
          </div>
