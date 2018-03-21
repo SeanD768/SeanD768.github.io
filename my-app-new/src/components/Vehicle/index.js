@@ -50,17 +50,17 @@ class Vehicle extends Component {
       }
 
 
-
+      
 
       enableMake = (event) => {
-        // console.log("The Make is now enabled");
+        console.log("The Make is now enabled");
         const value = event.target.value;
         this.setState({ yearValue: value });  
         this.setState({makeValue: ''})
         this.setState({ modelValue: ''})              
         this.setState({ modelDisabled: true });
-        this.setState({ makeDisabled: false });
-        this.setState({ buttonDisabled: false}, () => {
+        this.setState({ buttonDisabled: false });
+        this.setState({ makeDisabled: false }, () => {
            this.makeInput.formField.focus();
         });
       }
@@ -72,7 +72,7 @@ class Vehicle extends Component {
         this.setState({modelValue: ''});
         this.setState({ modelDisabled: false }, () => {
           this.modelInput.formField.focus();
-        })
+        });
       }
 
       enableComplete = (event) => {
@@ -106,6 +106,8 @@ class Vehicle extends Component {
             } = this.state;
 
     
+            console.log('updated');
+
         return (
 
 
@@ -121,7 +123,8 @@ class Vehicle extends Component {
             { text: '2010', value: '2010', }
             ] }
             value={this.state.yearValue}
-            onChange={this.enableMake}
+            onChange={(event) => {this.enableMake(event)}}
+            //onClick={(event) => {this.enableMake(event)}}
             required 
             /> 
 
@@ -163,9 +166,6 @@ class Vehicle extends Component {
 
 
             <Button className="btn" text="Add" disabled={this.state.buttonDisabled} />
-
-          {/* <input type="text" ref={(input) => {this.makeInput = input; }} /> */}
-          {/* <input type="text" ref={(input) => {this.modelInput = input; }} /> */}
 
 
          </div>
