@@ -1,8 +1,3 @@
-//`use strict`;
-
-// `use strict` causing an issue where having this declared above the imports:
-// "Import in body of module; reorder to top"
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import FormField from '../form-field/';
@@ -141,6 +136,14 @@ export default class Autocomplete extends React.Component {
    */
   static defaultProps = {
     /**
+     * Minimum fliter value length
+     * 
+     * @property Autocomplete.defaultProps.minFilterValueLength
+     * @type {Number}
+     */
+      minFilterValueLength: 1,
+    
+     /**
      * Returns a boolean to determine if
      * the provided suggestion should show or not
      *
@@ -238,6 +241,7 @@ export default class Autocomplete extends React.Component {
    * @static
    */
   static propTypes = {
+    minFilterValueLenght: PropTypes.number,
     filterSuggestion: PropTypes.func,
     suggestions: PropTypes.array,
     createSuggestion: PropTypes.func,
@@ -348,7 +352,12 @@ export default class Autocomplete extends React.Component {
    * @protected
    */
   _onInput = (event) => {
+    const { minFilterValueLength } = this.props;
     const value = event.target.value || '';
+
+    if (value.length < minFilterValueLength) {
+      return;
+    }
 
     if(this.props.hasDebounce) {
       this.debounce(value);
@@ -576,6 +585,7 @@ export default class Autocomplete extends React.Component {
    */
   render() {
     const {
+      minFilterValueLength,
       className,
       label,
       createSuggestion,

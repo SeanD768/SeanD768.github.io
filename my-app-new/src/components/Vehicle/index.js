@@ -12,15 +12,15 @@ const defaultOptionYear = {
   };
   
   const makes = [
-  { text: 'Alfa Romeo', value: 'Alfa Romeo'},      
+  { text: 'Alfa Romeo', value: 'Alfa Romeo' },      
   { text: 'Audi', value: 'Audi' },
-  { text: 'BMW', value: 'BMW'},
-  { text: 'Dodge', value: 'Dodge'},  
+  { text: 'BMW', value: 'BMW' },
+  { text: 'Dodge', value: 'Dodge' },  
   { text: 'Ferrari', value: 'Ferrari' }, 
   { text: 'Mitsubishi', value: 'Mitsubishi' },  
   { text: 'Tesla', value: 'Tesla' },
-  { text: 'Toyota', value: 'Toyota'},
-  
+  { text: 'Toyota', value: 'Toyota' },
+  { text: 'Lexus', value: 'Lexus' },
   ];
   
   const models = [
@@ -32,7 +32,7 @@ const defaultOptionYear = {
   { text: 'Viper', value: 'Viper'},  
   { text: '4C Spider', value: '4C Spider'},
   { text: '458 Italia', value: '458 Italia' },
-
+  { text: 'RX', value: 'RX' },
   ];
 
 
@@ -66,22 +66,29 @@ class Vehicle extends Component {
       }
 
       enableModel = (event) => {
-        console.log("The Model is now enabled");
         const value = event.value;
         this.setState({ makeValue: value });
         this.setState({modelValue: ''});
         this.setState({ modelDisabled: false }, () => {
           this.modelInput.formField.focus();
         });
+        console.log("The Model is now enabled");
+        
       }
 
-      enableComplete = (event) => {
-        console.log(this.state.makeValue, this.state.modelValue);              
+      enableComplete = (event) => {             
         const value = event.value;                
         this.setState({ modelValue: value });
+        console.log("All options chosen");
+      }
+
+      logValues = (event) => {
+
         const makeValue = this.state.makeValue;
         const modelValue = this.state.modelValue;
-
+        const yearValue = this.state.yearValue;
+        console.log( yearValue, ",", makeValue, ",", modelValue );
+        alert( yearValue + ", " + makeValue + ", " + modelValue );
       }
 
 
@@ -95,6 +102,8 @@ class Vehicle extends Component {
             const {
                 enableMake,
                 enableModel,
+                enableComplete,
+                logValues,
                 focusModelSelection,
                 focusTextInput,
             } = this;
@@ -102,12 +111,13 @@ class Vehicle extends Component {
             const {
                 makeDisabled,
                 modelDisabled,
-                buttonDisabled
+                buttonDisabled,
+                makeValue,
+                modelValue,
+                yearValue,
             } = this.state;
 
-    
-            console.log('updated');
-
+  
         return (
 
 
@@ -120,7 +130,13 @@ class Vehicle extends Component {
             options={ [
             { text: '1960', value: '1960', },
             { text: '2000', value: '2000', },
-            { text: '2010', value: '2010', }
+            { text: '2010', value: '2010', },
+            { text: '2011', value: '2011', },
+            { text: '2012', value: '2012', },
+            { text: '2013', value: '2013', },
+            { text: '2014', value: '2014', },
+            { text: '2015', value: '2015', },
+            { text: '2016', value: '2016', }
             ] }
             value={this.state.yearValue}
             onChange={(event) => {this.enableMake(event)}}
@@ -153,7 +169,7 @@ class Vehicle extends Component {
             placeholder="Model"
             ref={input => {this.modelInput = input; }}
             value={ this.state.modelValue }
-            minFilterValueLength={ 3 }
+            minFilterValueLength={ 2 }
             suggestions={ models }
             disabled={this.state.modelDisabled}
             onClickSuggestion={(event) => {this.enableComplete(event)}}
@@ -164,8 +180,8 @@ class Vehicle extends Component {
             
             <div id="ButtonBreak"/>
 
+            <button className="btn" value="Add" onClick={logValues}> Add </button>
 
-            <Button className="btn" text="Add" disabled={this.state.buttonDisabled} />
 
 
          </div>
