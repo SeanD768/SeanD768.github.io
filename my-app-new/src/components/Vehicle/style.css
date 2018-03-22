@@ -41,7 +41,8 @@
   
   .grid-item-1 {
       padding: 20px;
-      font-size: 0.8em;
+      /*font-size: 0.8em;*/
+      font-size: 16px;
       -webkit-appearance: none;
       -moz-appearance: none;
       border: transparent;    
@@ -59,17 +60,18 @@
 
     .grid-item-2 {
     
-      width: auto;
-      font-size: 0.8em;
+      width: 70%;
+      font-size: 0.7em;
       
-      }
+  }
 
 
   
     .grid-item-3 {
       
       padding: 20px;
-      font-size: 0.8em;
+      /*font-size: 0.8em;*/
+      font-size: 16px;
       -webkit-appearance: none;
       -moz-appearance: none;
       border: none;
@@ -139,7 +141,7 @@
       border-radius: 2;
       color: #000;
       display: block;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 400;
       height: 1.875pxrem;
       order: 2;
