@@ -50,20 +50,19 @@ class Vehicle extends Component {
       }
 
 
-      
 
       enableMake = (event) => {
         console.log("The Make is now enabled");
         const value = event.target.value;
         this.setState({ yearValue: value });  
-        this.setState({makeValue: ''})
-        this.setState({ modelValue: ''})              
-        this.setState({ modelDisabled: true });
-        this.setState({ buttonDisabled: false });
+        this.setState({ makeValue: '' })
+        this.setState({ modelValue: '' })              
+        this.setState({ modelDisabled: true })
         this.setState({ makeDisabled: false }, () => {
            this.makeInput.formField.focus();
         });
-      }
+    }
+
 
       enableModel = (event) => {
         const value = event.value;
@@ -88,11 +87,8 @@ class Vehicle extends Component {
         const modelValue = this.state.modelValue;
         const yearValue = this.state.yearValue;
         console.log( yearValue, ",", makeValue, ",", modelValue );
-        alert( yearValue + ", " + makeValue + ", " + modelValue );
+        //alert( yearValue + ", " + makeValue + ", " + modelValue );
       }
-
-
-
 
 
 
@@ -130,13 +126,16 @@ class Vehicle extends Component {
             options={ [
             { text: '1960', value: '1960', },
             { text: '2000', value: '2000', },
+            { text: '2009', value: '2009', },
             { text: '2010', value: '2010', },
             { text: '2011', value: '2011', },
             { text: '2012', value: '2012', },
             { text: '2013', value: '2013', },
             { text: '2014', value: '2014', },
             { text: '2015', value: '2015', },
-            { text: '2016', value: '2016', }
+            { text: '2016', value: '2016', },
+            { text: '2017', value: '2017', },
+            { text: '2018', value: '2018', },
             ] }
             value={this.state.yearValue}
             onChange={(event) => {this.enableMake(event)}}
