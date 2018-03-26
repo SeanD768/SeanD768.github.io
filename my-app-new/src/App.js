@@ -7,7 +7,7 @@ import Vehicle from './components/Vehicle';
 import AutoMany from './components/AutoMany';
 import Autocomplete from './components/autocomplete';
 import Dropdown from './components/dropdown';
-
+import Animation from './components/Animation';
 
 
   class App extends React.Component {
@@ -36,7 +36,7 @@ import Dropdown from './components/dropdown';
 
 
       <Vehicle />
-
+      <Animation />
 
         {/* <AutoMany/> */}
 
