@@ -1,0 +1,21 @@
+
+
+.flex-container {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#Tire-Flat {
+  
+  visibility: hidden;
+  
+}
+
+#Wheel-1 {
+  
+  visibility: visible;
+  
+}
