@@ -3,14 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 //import Button from './components/button';
 //import Autosuggest from 'react-autosuggest';
-import Vehicle from './components/Vehicle';
+//import Vehicle from './components/Vehicle';
 import AutoMany from './components/AutoMany';
 import Autocomplete from './components/autocomplete';
 import Dropdown from './components/dropdown';
-//import Animation from './components/Animation';
+import Animation from './components/Animation';
+//import Waypoint from 'react-waypoint';
+import Greensock from 'gsap';
+class App extends React.Component {
 
 
-  class App extends React.Component {
 
     render() {
 
@@ -33,12 +35,15 @@ import Dropdown from './components/dropdown';
     */}
 
 
+<div className="big-break"/>
 
 
-      <Vehicle />
-      {/* <Animation /> */}
+        <div>
+      <Animation />
+      </div>
 
-        {/* <AutoMany/> */}
+      <div className="big-break"/>
+
 
         </div>
 
