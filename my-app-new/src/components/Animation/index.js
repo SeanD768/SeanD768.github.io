@@ -1,10 +1,22 @@
 import React , { Component } from 'react';
 import Greensock from 'gsap';
 import './style.css';
+import Waypoint from 'react-waypoint';
 class Animation extends Component {
+    constructor (props) {
+        super(props);
+
+        this.state = {
+
+            animationEntered: false,            
+
+        }
+    }
+
 
 componentDidMount() {
-    this.ghrtl = new Greensock.TimelineMax({});
+    this.ghrtl = new Greensock.TimelineMax({paused: true});
+
      
     
 
@@ -42,11 +54,45 @@ ghrtl.to("#Cloud-End", 8, {x: 5}, 'FlatTire')
 
 ghrtl.timeScale(0.5);
     }
+
+
+
+    playAnimation = () => {
+        
+              console.log('Play the animation');
+              this.ghrtl.play( 0, false );
+        
+            }
+
+            onEnter = () => {
+                const {
+                    animationEntered,
+                } = this.state;
+
+                if (animationEntered) {
+                    return;
+                }
+                    else    {
+
+                        this.playAnimation();
+
+                        this.setState({
+                            animationEntered: true,
+                        });     
+                    }
+                }
+
+
+            
+
+
 render() {
 
 
 return(
 
+    <Waypoint onEnter={this.onEnter }>
+    
 <div className="flex-container">
 <svg height="185px" width="916px" version="1.1" viewBox="0 0 916 185">
 <defs>
@@ -496,6 +542,7 @@ return(
 </g>
 </svg>
 </div>
+</Waypoint>
 
 );
 

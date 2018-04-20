@@ -161,19 +161,6 @@ class Vehicle extends Component {
             />
 
 
-            <p className="grid-item-2"> / </p>
-            
-            <Autocomplete
-            inputclassName="grid-item-3"
-            placeholder="Model"
-            ref={input => {this.modelInput = input; }}
-            value={ this.state.modelValue }
-            minFilterValueLength={ 2 }
-            suggestions={ models }
-            disabled={this.state.modelDisabled}
-            onClickSuggestion={(event) => {this.enableComplete(event)}}
-            />
-
             </div>
             </div>
             
